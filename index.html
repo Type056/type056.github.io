@@ -6,22 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Type056</title>
   <style>
-    @font-face {
-      font-family: 'code';
-      src:  url('./font/JMH-Beda.ttf.woff') format('woff'),
-      url('./font/JMH-Beda.ttf.svg#JMH-Beda') format('svg'),
-      url('./font/JMH-Beda.ttf.eot'),
-      url('./font/JMH-Beda.eot?#iefix') format('embedded-opentype'); 
-      font-weight: normal;
-      font-style: normal;
-    }
+@font-face {
+  font-family: 'ChopinScript';
+    src:  url('./font/ChopinScript.ttf.woff') format('woff'),
+    url('./font/ChopinScript.ttf.svg#ChopinScript') format('svg'),
+    url('./font/ChopinScript.ttf.eot'),
+    url('./font/ChopinScript.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
     html,body{
       height: 100%;
       overflow: hidden;
     }
     body{
       color: #333;
-      background: linear-gradient(30deg,#00ffa9,#00bfff);
+      background: #333;
+      /* background: linear-gradient(30deg,#91ffcb,#00bfff); */
+      /* background: url(./media/michael-olsen-501079-unsplash.jpg)no-repeat center / cover; */
       margin: 0;
       padding: 0;
       display: flex;
@@ -30,17 +32,38 @@
       align-items: center;
       font-family: Arial, Helvetica, sans-serif;
     }
+    .the_blur_box{
+      opacity: 0.8;
+      position: absolute;
+      z-index: -1;
+      background: url(./media/michael-olsen-501079-unsplash.jpg)no-repeat center / cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: scale(1.1);
+      -webkit-filter: blur(10px);
+      -moz-filter: blur(10px);
+      filter: blur(10px);
+    }
     h1{
-      font-family: code;
+      font-weight: normal;
+      font-family: "ChopinScript";
       margin: 0;
       padding: 0;
-      font-size: 50px;
+      font-size: 120px;
       color: #fff;
-      text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+      /* text-shadow: 4px 4px 4px rgba(0,0,0,0.1); */
+    }
+    @media screen and (max-width:768px){
+      h1{
+        font-size: 60px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class = "the_blur_box"></div>
   <h1>
     Hello World
   </h1>
